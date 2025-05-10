@@ -1,0 +1,40 @@
+.swiper {
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1b1642;
+  }
+  
+  /* 🟣 Pagination bullets längst ner */
+  .swiper-pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .swiper-pagination-bullet {
+    background: gray;
+    opacity: 0.6;
+    width: 7px;
+    height: 7px;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: opacity 0.3s;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: white;
+    opacity: 1;
+  }
+  

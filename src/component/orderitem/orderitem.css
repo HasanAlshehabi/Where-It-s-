@@ -1,0 +1,34 @@
+.order-item {
+    border: 2px solid #ff4081;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .order-event-name {
+    color: #ff4081;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .order-event-time {
+    color: #00d1b2;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .order-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .order-counter button {
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  

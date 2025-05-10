@@ -1,0 +1,33 @@
+/* Hela sidan */
+.start-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1642;
+  }
+  
+  /* Logotyp */
+  .logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  /* Titlar och text */
+  .title {
+    font-size: 1.9rem;
+    margin-bottom: 0.5rem;
+    color: #ff4081;
+    font-style: italic;
+  }
+
+  
+  .subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    font-style: italic;
+    font-weight: 100;
+  }
