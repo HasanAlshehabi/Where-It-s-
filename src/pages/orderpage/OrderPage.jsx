@@ -1,16 +1,19 @@
 import useStore from '../../store/store'
 import OrderItem from '../../component/orderitem/OrderItem'
+import generateTicketsFromCart from '../../utils/generateTicketId'
 import { useNavigate } from 'react-router-dom'
 import './orderpage.css'
 
 function OrderPage() {
-  const { cart } = useStore()
+  const { cart, setTickets, clearCart } = useStore()
   const navigate = useNavigate()
 
   const total = cart.reduce((sum, item) => sum + item.qty * item.price, 0)
 
-  const handleSubmit = () => {
-    if (cart.length === 0) return
+  const handleSubmitOrder = () => {
+    const tickets = generateTicketsFromCart(cart)
+    setTickets(tickets)
+    clearCart()
     navigate('/ticket')
   }
 
@@ -23,7 +26,7 @@ function OrderPage() {
       <p className="order-total-text">Totalt värde på order</p>
       <h2 className="order-total">{total} sek</h2>
 
-      <button className="submit-btn" onClick={handleSubmit}>Skicka order</button>
+      <button className="submit-btn" onClick={handleSubmitOrder}>Skicka order</button>
     </div>
   )
 }

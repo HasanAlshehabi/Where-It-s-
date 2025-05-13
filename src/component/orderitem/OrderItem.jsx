@@ -17,15 +17,17 @@ function OrderItem({ item }) {
   
     return (
       <div className="order-item">
+        <div className="order-text">
         <h2 className="order-event-name">{item.name}</h2>
         <p className="order-event-time">
           {item.when?.date} kl {item.when?.from} - {item.when?.to}
         </p>
+        </div>
   
         <div className="order-counter">
-          <button onClick={decrease}>-</button>
-          <span>{item.qty}</span>
-          <button onClick={increase}>+</button>
+          <button className='order-section' onClick={decrease}>-</button>
+          <span className='order-section order-value'>{item.qty}</span>
+          <button className='order-section' onClick={increase}>+</button>
         </div>
       </div>
     )

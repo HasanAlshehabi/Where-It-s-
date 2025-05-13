@@ -1,19 +1,58 @@
-import generateTicketId from '../../utils/generateTicketId'
+import useStore from '../../store/store'
+import './ticketpage.css'
+import Barcode from 'react-barcode'
 
 function TicketPage() {
-  const ticketId = generateTicketId()
-  const section = 'C'
-  const seatNumber = 200 + Math.floor(Math.random() * 100) // Slumpad plats
+  const { tickets } = useStore()
+
+  if (tickets.length === 0) {
+    return <p>Inga biljetter än. Skicka en beställning först.</p>
+  }
 
   return (
-    <div className="ticket-page" style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>Din biljett</h1>
-      <div style={{ border: '1px solid gray', padding: '2rem', marginTop: '2rem' }}>
-        <p><strong>ID:</strong> {ticketId}</p>
-        <p><strong>Sektion:</strong> {section}</p>
-        <p><strong>Platsnummer:</strong> {seatNumber}</p>
-        <p>Ha en trevlig konsert!</p>
-      </div>
+    <div className="ticket-page">
+    {tickets.map((ticket) => (
+      <div className="ticket-card" key={ticket.id}>
+          <div className="ticket-section what">
+            <span className="label">WHAT</span>
+            <h1>{ticket.name}</h1>
+          </div>
+
+          <div className="ticket-section where">
+            <span className="label">WHERE</span>
+            <h2>{ticket.where}</h2>
+            <p>Göteborgs universitet. Pedagogen, hus A</p>
+          </div>
+
+          <div className="ticket-section when">
+            <span className="label">WHEN</span>
+            <div className="when-row">
+              <div>
+                <span className="sub-label">DATE</span>
+                <p>{ticket.date}</p>
+              </div>
+              <div>
+                <span className="sub-label">FROM</span>
+                <p>{ticket.from}</p>
+              </div>
+              <div>
+                <span className="sub-label">TO</span>
+                <p>{ticket.to}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="ticket-section info">
+            <span className="label">INFO</span>
+            <p>{ticket.info}</p>
+          </div>
+
+          <div className="barcode">
+            <Barcode value={ticket.id} height={40} width={1.5} />
+            <p className="barcode-id">#{ticket.id}</p>
+          </div>
+        </div>
+      ))}
     </div>
   )
 }

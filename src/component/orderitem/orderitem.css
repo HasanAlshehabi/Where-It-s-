@@ -1,27 +1,61 @@
 .order-item {
     border: 2px solid #ff4081;
     border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    width: 300px;
+    margin: 0 auto 1.5rem auto;
+    background-color: #1b1642;
+    overflow: hidden;  
   }
   
+  .order-text{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    padding: .5rem;
+    text-align: center;
+    border-bottom: 1px solid #ff4081;
+    background-color: #1b1642;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .order-event-name {
     color: #ff4081;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 0.2rem;
   }
   
   .order-event-time {
     color: #00d1b2;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    
   }
   
   .order-counter {
     display: flex;
+    height: 60px;
+  }
+  
+  .order-section{
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    border-right: 1px solid #ff4081;
+    background-color: transparent; 
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .order-section:first-child {
+    border-right: 1px solid #ff4081;
+  }
+
+  .order-value{
+    cursor: default;
   }
   
   .order-counter button {
@@ -31,4 +65,10 @@
     border: none;
     cursor: pointer;
   }
+
+  
+
+  
+
+  
   
