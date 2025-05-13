@@ -52,7 +52,7 @@ function EventsPage() {
             </div>
           ))
         ) : (
-          <p className="no-results">Inga event hittades.</p>
+          <p className="no-results">Inga event hittades</p>
         )}
       </div>
     </div>

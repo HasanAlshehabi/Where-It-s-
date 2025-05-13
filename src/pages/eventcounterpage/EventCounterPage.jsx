@@ -9,7 +9,7 @@ function EventCounterPage() {
   const event = events.find(e => e.id === id)
   const navigate = useNavigate();
 
-  if (!event) return <p>Event hittades inte...</p>
+  if (!event) return <p>inget event hittades</p>
 
   return (
     <div className="event-counter-page">
