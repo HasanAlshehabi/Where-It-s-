@@ -31,13 +31,19 @@
     text-transform: uppercase;
     font-weight: bold;
   }
+
+  .sub-label-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
   
   .sub-label {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: gray;
     text-transform: uppercase;
     margin-bottom: 0.3rem;
-    display: block;
   }
   
   .ticket-section h1 {
@@ -61,7 +67,18 @@
   .when-row {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 3rem;
+    margin-top: .5rem;
+  }
+  
+  /* istället för att varje lable eget class , date, from, to, för aligna dem*/
+  .when-row > div {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
   }
   
   .barcode {
