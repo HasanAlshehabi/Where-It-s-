@@ -17,8 +17,8 @@ function Counter({ price, event }) {
   }
 
   const handleAddToCart = () => {
-    addToCart(event, qty) // Lägg till i state
-    navigate('/events')   // Navigera tillbaka
+    addToCart(event, qty)
+    navigate('/events')   
   }
 
   return (

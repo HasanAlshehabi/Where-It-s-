@@ -9,7 +9,7 @@ function OrderItem({ item }) {
   
     const decrease = () => {
       if (item.qty === 1) {
-        removeFromCart(item.id) // 💥 Remove the ticket
+        removeFromCart(item.id) 
       } else {
         updateQty(item.id, item.qty - 1)
       }
