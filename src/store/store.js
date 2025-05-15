@@ -40,7 +40,7 @@ const useStore = create((set) => ({
     cart: state.cart.filter(item => item.id !== id)
   })),
 
-  // tömmer hela varukorgen – används efter att order har skickats
+  // tömmer hela varukorgen används efter att order har skickats
   clearCart: () => set({ cart: [] }),
 
   // sparar genererade biljetter i state, den används efter att en order har skickats

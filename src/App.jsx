@@ -8,7 +8,7 @@ import StartPage from './pages/startpage/StartPage'
 import EventPage from './pages/eventpage/EventPage'
 import OrderPage from './pages/orderpage/OrderPage'
 import TicketPage from './pages/ticketpage/TicketPage'
-import EventCounterPage from './pages/eventcounterpage/EventCounterPage' // ✅
+import EventCounterPage from './pages/eventcounterpage/EventCounterPage'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -35,7 +35,6 @@ function App() {
         swiperRef.current.slideTo(0)
         break
       default:
-        // Gör inget – låt Routes hantera t.ex. /event/:id
         break
     }
   }, [location.pathname])
@@ -59,7 +58,7 @@ function App() {
 
   return (
     <Routes>
-      {/* Route för sidor i Swiper */}
+      {/* Route för alla sidor i Swiper */}
       <Route
         path="/*"
         element={
@@ -81,7 +80,7 @@ function App() {
         }
       />
 
-      {/* ✅ Route för EventCounterPage */}
+      {/* Route för EventCounterPage */}
       <Route path="/event/:id" element={<EventCounterPage />} />
     </Routes>
   )

@@ -13,7 +13,6 @@
     background-color: #1b1642;
   }
   
-  /* 🟣 Pagination bullets längst ner */
   .swiper-pagination {
     position: absolute;
     bottom: 20px;
