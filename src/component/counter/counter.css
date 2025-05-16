@@ -5,7 +5,7 @@
     max-width: 300px;
     margin: 0 auto 1.5rem auto;
     background-color: #1b1642;
-    overflow: hidden; /* 💡 Important: trims borders perfectly */
+    overflow: hidden; 
   }
   
   .price-text {

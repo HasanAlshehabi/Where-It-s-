@@ -1,4 +1,3 @@
-// src/component/searchbar/SearchBar.jsx
 import './searchbar.css'
 
 function SearchBar({ value, onChange }) {
