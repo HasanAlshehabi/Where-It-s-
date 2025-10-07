@@ -1,10 +1,10 @@
 .cart-badge {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    cursor: pointer;
-  }
+  position: absolute;    /* <- change to absolute */
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
   
   .cart-icon-wrapper {
     position: relative;
