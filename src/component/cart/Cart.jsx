@@ -1,6 +1,7 @@
 import useStore from '../../store/store'
 import { useNavigate } from 'react-router-dom'
 import './cart.css'
+import cartIcon from '../../assets/Cart.png' 
 
 function CartBadge() {
     const { cart } = useStore()
@@ -10,7 +11,7 @@ function CartBadge() {
     return (
       <div className="cart-badge" onClick={() => navigate('/order')}>
         <div className="cart-icon-wrapper">
-          <img src="./src/assets/Cart.png" alt="cart" className="cart-icon" />
+          <img src={cartIcon} alt="cart" className="cart-icon" />
           {totalTickets > 0 && (
             <span className="cart-count">{totalTickets}</span>
           )}
